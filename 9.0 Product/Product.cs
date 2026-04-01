@@ -56,11 +56,22 @@ namespace Products
             }
         }
 
+        private static double _productCount;
+        public static double ProductCount
+        {
+            get
+            {
+                return _productCount;
+            }
+        }
+
+
         public Product(string name, double price, double quantity)
         {
             Name = name;
             Price = price;
             Quantity = quantity;
+            _productCount++;
         }
     }
 }
