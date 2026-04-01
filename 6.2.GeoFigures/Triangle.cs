@@ -3,6 +3,9 @@ public class Triangle
     public double Base;
     public double Height;
 
+    public Triangle()
+    {
+    }
     public Triangle(double triangleBase, double height)
     {
         Base = triangleBase;

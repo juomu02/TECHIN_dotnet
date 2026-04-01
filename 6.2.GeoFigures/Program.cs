@@ -15,6 +15,11 @@ public class GeoFigures
         var rectArea = rectangle.GetArea();
         var rectPerimeter = rectangle.GetPerimeter();
 
+        var circleEmpty = new Circle();
+        var triangleEmpty = new Triangle();
+        var rectangleEmpty = new Rectangle();
+        Console.WriteLine($"circle empty area: {circleEmpty.GetArea()} units²; triangle empty area: {triangleEmpty.GetArea()} units²; rectangle empty area: {rectangleEmpty.GetArea()} units²;");
+
         Console.WriteLine($"Rectangle area is {rectArea} units² and perimeter is {rectPerimeter} units.");
 
         var circleArea = circle.GetArea();

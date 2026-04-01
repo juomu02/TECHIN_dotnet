@@ -1,6 +1,10 @@
 public class Circle
 {
     public double Radius;
+
+    public Circle()
+    {
+    }
     public Circle(double radius)
     {
         Radius = radius;

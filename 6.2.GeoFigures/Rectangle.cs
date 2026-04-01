@@ -25,6 +25,9 @@ public class Rectangle
         }
     }
 
+    public Rectangle()
+    {
+    }
     public Rectangle(double width, double height)
     {
         Width = width;
