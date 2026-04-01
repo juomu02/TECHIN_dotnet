@@ -21,8 +21,18 @@ public class Tasks
         personList.Add(new Person("Gabija", "Mickevičiūtė", DateTime.Parse("01/01/2006"), "Vilnius"));
         personList.Add(new Person("Emilija", "Stankevičiūtė", DateTime.Parse("01/01/2006"), "Kaunas"));
         personList.Add(new Person("Kamilė", "Jankauskaitė", DateTime.Parse("01/01/1991"), "Vilnius"));
-        personList.Add(new Person("Gabrielė", "Žukauskė", DateTime.Parse("01/01/1991"), "Klaipėda"));
-        personList.Add(new Person("Austėja", "Butkienė", DateTime.Parse("01/01/1981"), "Alytus"));
+        personList.Add(new Person("Gabrielė", "Žukauskė", DateTime.Parse("01/01/1991"), "Vilnius"));
+        personList.Add(new Person("Kamilė", "Butkienė", DateTime.Parse("01/01/1983"), "Vilnius"));
+        personList.Add(new Person("Tomas", "Mickevičius", DateTime.Parse("01/01/2006"), "Vilnius"));
+        personList.Add(new Person("Tomas", "Stankevičius", DateTime.Parse("01/01/2001"), "Vilnius"));
+        personList.Add(new Person("Petras", "Jankauskas", DateTime.Parse("01/01/2010"), "Vilnius"));
+        personList.Add(new Person("Ignas", "Žukauskas", DateTime.Parse("01/01/1991"), "Vilnius"));
+        personList.Add(new Person("Marius", "Butkus", DateTime.Parse("01/01/1981"), "Vilnius"));
+        personList.Add(new Person("Gabija", "Mickevičiūtė", DateTime.Parse("01/01/2007"), "Vilnius"));
+        personList.Add(new Person("Emilija", "Stankevičiūtė", DateTime.Parse("01/01/2006"), "Vilnius"));
+        personList.Add(new Person("Kamilė", "Jankauskienė", DateTime.Parse("01/01/1991"), "Vilnius"));
+        personList.Add(new Person("Gabrielė", "Žukauskienė", DateTime.Parse("01/01/1991"), "Vilnius"));
+        personList.Add(new Person("Austėja", "Butkienė", DateTime.Parse("01/01/1981"), "Vilnius"));
 
         //Surikiuokite sąrašą pagal amžių nuo didžiausios reikšmės 
         var listSortedAge = op.SortAgeDesc(personList);
@@ -49,9 +59,10 @@ public class Tasks
         mc.PrintPersonList(filteredBySelectionList);
 
 
-        //6. Padarykite galimybę vartotojui pasirinkti pagal kokią savybę (FirstName, LastName, Age arba City) jis nori rikiuoti duomenis.
+        // 6. Padarykite galimybę vartotojui pasirinkti pagal kokią savybę (FirstName, LastName, Age arba City) jis nori rikiuoti duomenis.
         var sortedBySelectionList = op.SortPersonsBySelection(personList);
         mc.PrintPersonList(sortedBySelectionList);
+        
     }
     private void PrintTop5(List<Person> inputList)
     {
