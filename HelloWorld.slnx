@@ -1,0 +1,14 @@
+<Solution>
+  <Project Path="2.0 Ciklai/2.0 Ciklai.csproj" />
+  <Project Path="2.1 Masyvai/2.1 Masyvai.csproj" />
+  <Project Path="2.2 List/2.2 List.csproj" />
+  <Project Path="2.5 ReadNumber metodo patobulinimai/2.5 ReadNumber metodo patobulinimai.csproj" />
+  <Project Path="3.0 Tekstinės eilutės/3.0 Tekstinės eilutės.csproj" />
+  <Project Path="3.1 Tekstinės eilutės 2/3.1 Tekstinės eilutės 2.csproj" />
+  <Project Path="5.0 HashSet/5.0 HashSet.csproj" />
+  <Project Path="5.1 Dictionary/5.1 Dictionary.csproj" />
+  <Project Path="6.0 Failai/6.0 Failai.csproj" />
+  <Project Path="6.2.GeoFigures/6.2.GeoFigures.csproj" />
+  <Project Path="1.0 if, aritmetines op., ivedimas, isvedimas/1.0 if, aritmetines op., ivedimas, isvedimas.csproj" />
+  <Project Path="7.1 Klasės, Klasės 2/7.1 Klasės, Klasės 2.csproj" />
+</Solution>
