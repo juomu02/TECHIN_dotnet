@@ -1,10 +1,10 @@
 public class Person
 {
-    public string FirstName;
-    public string LastName;
-    public int Age;
-    public string City;
-    public DateTime Bitrhtday;
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int Age { get; }
+    public string City { get; set; }
+    public DateTime Bitrhtday { get; set; }
     public Person(string firstName, string lastName, DateTime bitrhtday, string city)
     {
         FirstName = firstName;
@@ -12,5 +12,14 @@ public class Person
         City = city;
         Bitrhtday = bitrhtday;
         Age = DateTime.Now.Year - Bitrhtday.Year;
-    }    
+    }
+    public static SortedDictionary<int, string> GetPropertyList()
+    {
+        return new SortedDictionary<int, string> {
+            { 1, "FirstName" },
+            { 2, "LastName" },
+            { 3, "Age" },
+            { 4, "City" }
+            };
+    }
 }

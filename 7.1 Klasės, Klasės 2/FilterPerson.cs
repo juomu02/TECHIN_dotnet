@@ -7,18 +7,21 @@ public class FilterPerson
         return personList.Where(o => o.City == searchCity).ToList();
     }
 
-     public List<Person> FilterPersonsBySelection(List<Person> personList)
+    public List<Person> FilterPersonsBySelection(List<Person> personList)
     {
+
+        var searchOptions = Person.GetPropertyList();
         var mc = new Tasks();
-        var searchOption = mc.UserInputOption("Pasirinkite pagal kokią savybę norit filtruoti duomenis:");
+        var searchOption = mc.UserInputOption("Pasirinkite pagal kokią savybę norit filtruoti duomenis:", searchOptions);
         var userSearchphrase = mc.UserInputSearchWord();
         return SearchList(personList, searchOption, userSearchphrase);
 
     }
 
-     private List<Person> SearchList(List<Person> personList, int searchOption, string searchPhrase)
+    private List<Person> SearchList(List<Person> personList, int searchOption, string searchPhrase)
     {
         var filteredList = new List<Person>();
+
         Console.WriteLine("Rasti įrašai:");
 
         switch (searchOption)
