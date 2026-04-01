@@ -24,29 +24,29 @@ public class Tasks
         personList.Add(new Person("Gabrielė", "Žukauskė", DateTime.Parse("01/01/1991"), "Klaipėda"));
         personList.Add(new Person("Austėja", "Butkienė", DateTime.Parse("01/01/1981"), "Alytus"));
 
-        // //Surikiuokite sąrašą pagal amžių nuo didžiausios reikšmės 
-        // var listSortedAge = op.SortAgeDesc(personList);
-        // // ir išveskite į ekraną top 5;
-        // mc.PrintTop5(listSortedAge);
+        //Surikiuokite sąrašą pagal amžių nuo didžiausios reikšmės 
+        var listSortedAge = op.SortAgeDesc(personList);
+        // ir išveskite į ekraną top 5;
+        mc.PrintTop5(listSortedAge);
 
 
-        // //2. Sukurkite failą, kuriame yra sąrašas Person. Pvz.: Vardas Pavardenis 25 Vilnius...
-        // var filePath = "/home/jum/git_projects/TECHIN/dotnet/7.1 Klasės, Klasės 2/person.txt";
-        // mc.ExportPersonListToFile(personList, filePath);
+        //2. Sukurkite failą, kuriame yra sąrašas Person. Pvz.: Vardas Pavardenis 25 Vilnius...
+        var filePath = "/home/jum/git_projects/TECHIN/dotnet/7.1 Klasės, Klasės 2/person.txt";
+        mc.ExportPersonListToFile(personList, filePath);
 
 
-        // //3. Parašykite metodą, kuris nuskaito duomenis iš failo į List<Person> sąrašą iš pirmo punkto;
-        // mc.ImportPersonListFromFile(personList, filePath);
+        //3. Parašykite metodą, kuris nuskaito duomenis iš failo į List<Person> sąrašą iš pirmo punkto;
+        mc.ImportPersonListFromFile(personList, filePath);
 
 
-        // //4. Padarykite galimybę filtruoti elementus pagal miestą. Miesto pavadinimas įvedamas vartotojo.
-        // var filteredList = fp.FilterPersonListByCity(personList);
-        // mc.PrintPersonList(filteredList);
+        //4. Padarykite galimybę filtruoti elementus pagal miestą. Miesto pavadinimas įvedamas vartotojo.
+        var filteredList = fp.FilterPersonListByCity(personList);
+        mc.PrintPersonList(filteredList);
 
 
-        // //5. Padarykite galimybę vartotojui pasirinkti pagal kokią savybę (FirstName, LastName, Age arba City) jis nori filtruoti duomenis.
-        // var filteredBySelectionList = fp.FilterPersonsBySelection(personList);
-        // mc.PrintPersonList(filteredBySelectionList);
+        //5. Padarykite galimybę vartotojui pasirinkti pagal kokią savybę (FirstName, LastName, Age arba City) jis nori filtruoti duomenis.
+        var filteredBySelectionList = fp.FilterPersonsBySelection(personList);
+        mc.PrintPersonList(filteredBySelectionList);
 
 
         //6. Padarykite galimybę vartotojui pasirinkti pagal kokią savybę (FirstName, LastName, Age arba City) jis nori rikiuoti duomenis.
