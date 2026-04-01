@@ -26,7 +26,7 @@ public class Tasks
 
 
         //2. Sukurkite failą, kuriame yra sąrašas Person. Pvz.: Vardas Pavardenis 25 Vilnius...
-        var filePath = "/home/jum/git_projects/TECHIN/dotnet/6.1.Classes/person.txt";
+        var filePath = "/home/jum/git_projects/TECHIN/dotnet/7.1 Klasės, Klasės 2/person.txt";
         mc.ExportPersonListToFile(personList, filePath);
 
 

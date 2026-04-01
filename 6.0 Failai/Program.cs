@@ -5,13 +5,13 @@ class Program
     public static void Main()
     {
         var mc = new Program();
-        // mc.Task1();
-        // mc.Task2();
-        // mc.Task3();
-        // mc.Task4(); //jau patikrinot (atordo?)
+        mc.Task1();
+        mc.Task2();
+        mc.Task3();
+        mc.Task4();
         mc.Task5();
-        // mc.Task6();
-        // mc.Task7();
+        mc.Task6();
+        mc.Task7();
         mc.Task8();
     }
 
@@ -22,7 +22,7 @@ class Program
         var userInput2 = UserInputLine("Įveskite antrą eilutę: ");
         var userInput3 = UserInputLine("Įveskite trečią eilutę: ");
 
-        var filePath = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/notes.txt";
+        var filePath = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/notes.txt";
 
         var options = new FileStreamOptions
         {
@@ -49,7 +49,7 @@ class Program
     private void Task2()
     {
         Console.WriteLine("2. Naudokite StreamReader, kad nuskaityti ir atvaizduoti tekstinio failo turinį eilutė po eilutės. Apdorokite atvejį, kai failas neegzistuoja.");
-        var filePath = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/notes.txt";
+        var filePath = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/notes.txt";
 
         var options = new FileStreamOptions
         {
@@ -70,7 +70,7 @@ class Program
     private void Task3()
     {
         Console.WriteLine("3. Naudokite StreamReader, kad nuskaityti tekstinį failą ir suskaičiuoti bendrą eilučių, žodžių ir simbolių skaičių. Ekrane atvaizduokite statistiką.");
-        var filePath = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/notes.txt";
+        var filePath = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/notes.txt";
         List<string> fileTextLines = new List<string>();
 
         var options = new FileStreamOptions
@@ -130,7 +130,7 @@ class Program
     private void Task4()
     {
         Console.WriteLine("4. Imituokite programos žurnalą (angl.logs): kiekvieną kartą paleidus programą, pridėkite naują laiko žymą į log.txt naudodami StreamWriter pridėjimo rėžimu.");
-        var filePath = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/log.txt";
+        var filePath = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/log.txt";
 
         var options = new FileStreamOptions
         {
@@ -149,7 +149,7 @@ class Program
     {
         Console.WriteLine("5. Nuskaitykite tekstinį failą naudodami StreamReader. Naudokite Dictionary<string, int>, kad suskaičiuoti žodžių dažnius ir atvaizduokite 5 dažniausiai pasitaikančius žodžius.");
 
-        var filePath = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/notes.txt";
+        var filePath = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/notes.txt";
         string textLines = "";
 
         var options = new FileStreamOptions
@@ -210,7 +210,7 @@ class Program
         Console.Write("Įveskite paieškos žodį: ");
         string searchWord = Console.ReadLine();
 
-        var filePath = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/notes.txt";
+        var filePath = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/notes.txt";
 
         var options = new FileStreamOptions
         {
@@ -238,8 +238,8 @@ class Program
         Console.WriteLine("7. Faile išsaugotas darbuotojų sąrašas. Kiekvienoje eilutėje yra darbuotojo vardas ir pavardė. Parašykite programą kuti nuskaitys failą, pakeis vardą ir pavardę į inicialus (pvz.J.J.) ir rezultatą išsaugos į naują failą.");
 
         List<string> initialList = new List<string>();
-        var filePath = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/names.txt";
-        var fileOutputPath = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/initials.txt";
+        var filePath = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/names.txt";
+        var fileOutputPath = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/initials.txt";
 
         var options = new FileStreamOptions
         {
@@ -251,7 +251,7 @@ class Program
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
-                if (line != null)
+                if (line != "")
                 {
                     string initials = "";
                     string[] words = line.Split(" ");
@@ -281,9 +281,9 @@ class Program
         char[] abc = { 'a', 'ą', 'b', 'c', 'č', 'd', 'e', 'ę', 'ė', 'f', 'g', 'h', 'i', 'į', 'y', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 'š', 't', 'u', 'ų', 'ū', 'v', 'z', 'ž' };
 
         int charShift = 5;
-        var filePath = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/names.txt";
-        var fileOutputPath = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/names_cyphered.txt";
-        var fileOutputPath2 = "/home/jum/git_projects/TECHIN/dotnet/5.2.Failai/names_decyphered.txt";
+        var filePath = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/names.txt";
+        var fileOutputPath = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/names_cyphered.txt";
+        var fileOutputPath2 = "/home/jum/git_projects/TECHIN/dotnet/6.0 Failai/names_decyphered.txt";
 
         CypherFile(filePath, fileOutputPath, abc, charShift);
         DecypherFile(fileOutputPath, fileOutputPath2, abc, charShift);

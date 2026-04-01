@@ -1,6 +1,6 @@
-1
-2 Labas Labas
-3
-6 Labas
+Labas, kaip
+sekas
+?
+Labas
 Labas
 end
