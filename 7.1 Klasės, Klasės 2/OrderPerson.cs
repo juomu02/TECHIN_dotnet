@@ -19,7 +19,8 @@ public class OrderPerson
         sortOptions.Add(0, "Papildomų savybių užtenka");
         for (int i = 0; i < maxAddOptions; i++)
         {
-            var additionalOption = mc.UserInputOption("Pasirinkite papildomą savybę, pagal kurią norit rikiuoti duomenis:", sortOptions);
+            var additionalOption = 
+                mc.UserInputOption("Pasirinkite papildomą savybę, pagal kurią norit rikiuoti duomenis:", sortOptions);
             if (additionalOption == 0) break;
 
             selectedOptions.Add(additionalOption);
@@ -29,7 +30,7 @@ public class OrderPerson
     }
     public void PrintSortMessage(SortedDictionary<int, string> optionsList, List<int> selectedSortOptions, int ascDesc)
     {
-        var sortOrder = ascDesc == 2 ? "Deschending" : "Aschending";
+        var sortOrder = ascDesc == 2 ? "Descending" : "Ascending";
         Console.Write($"Pasirinkti rikiavimo parametrai: {optionsList[selectedSortOptions[0]]}({sortOrder}); ");
         for (int index = 1; index < selectedSortOptions.Count; index++)
         {
@@ -49,34 +50,34 @@ public class OrderPerson
                     .GetProperty(optionsList[selectedSortOptions[0]])
                     .GetValue(o))
                         .ThenBy(o =>
-                        {
-                            if (selectedSortOptions.Count > 1)
                             {
-                                return o.GetType().GetProperty(optionsList[selectedSortOptions[1]])
-                                .GetValue(o);
+                                if (selectedSortOptions.Count > 1)
+                                {
+                                    return o.GetType().GetProperty(optionsList[selectedSortOptions[1]])
+                                    .GetValue(o);
+                                }
+                                else return o.FirstName;
                             }
-                            else return o;
-                        }
                                 )
                         .ThenBy(o =>
-                        {
-                            if (selectedSortOptions.Count > 2)
                             {
-                                return o.GetType().GetProperty(optionsList[selectedSortOptions[2]])
-                                .GetValue(o);
+                                if (selectedSortOptions.Count > 2)
+                                {
+                                    return o.GetType().GetProperty(optionsList[selectedSortOptions[2]])
+                                    .GetValue(o);
+                                }
+                                else return o.LastName;
                             }
-                            else return o;
-                        }
                                 )
                         .ThenBy(o =>
-                        {
-                            if (selectedSortOptions.Count > 3)
                             {
-                                return o.GetType().GetProperty(optionsList[selectedSortOptions[3]])
-                                .GetValue(o);
+                                if (selectedSortOptions.Count > 3)
+                                {
+                                    return o.GetType().GetProperty(optionsList[selectedSortOptions[3]])
+                                    .GetValue(o);
+                                }
+                                else return o.Age;
                             }
-                            else return o;
-                        }
                                 )
                         .ToList();
             default:
@@ -84,34 +85,34 @@ public class OrderPerson
                     .GetProperty(optionsList[selectedSortOptions[0]])
                     .GetValue(o))
                         .ThenBy(o =>
-                        {
-                            if (selectedSortOptions.Count > 1)
                             {
-                                return o.GetType().GetProperty(optionsList[selectedSortOptions[1]])
-                                .GetValue(o);
+                                if (selectedSortOptions.Count > 1)
+                                {
+                                    return o.GetType().GetProperty(optionsList[selectedSortOptions[1]])
+                                    .GetValue(o);
+                                }
+                                else return o.FirstName;
                             }
-                            else return o;
-                        }
                                 )
                         .ThenBy(o =>
-                        {
-                            if (selectedSortOptions.Count > 2)
                             {
-                                return o.GetType().GetProperty(optionsList[selectedSortOptions[2]])
-                                .GetValue(o);
+                                if (selectedSortOptions.Count > 2)
+                                {
+                                    return o.GetType().GetProperty(optionsList[selectedSortOptions[2]])
+                                    .GetValue(o);
+                                }
+                                else return o.LastName;
                             }
-                            else return o;
-                        }
                                 )
                         .ThenBy(o =>
-                        {
-                            if (selectedSortOptions.Count > 3)
                             {
-                                return o.GetType().GetProperty(optionsList[selectedSortOptions[3]])
-                                .GetValue(o);
+                                if (selectedSortOptions.Count > 3)
+                                {
+                                    return o.GetType().GetProperty(optionsList[selectedSortOptions[3]])
+                                    .GetValue(o);
+                                }
+                                else return o.Age;
                             }
-                            else return o;
-                        }
                                 )
                         .ToList();
         }
