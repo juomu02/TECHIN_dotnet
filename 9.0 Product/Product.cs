@@ -47,7 +47,6 @@ namespace Products
                 { _quantity = value; }
             }
         }
-
         public double TotalValue
         {
             get
@@ -55,7 +54,6 @@ namespace Products
                 return _price * _quantity;
             }
         }
-
         private static double _productCount;
         public static double ProductCount
         {
@@ -65,13 +63,33 @@ namespace Products
             }
         }
 
-
-        public Product(string name, double price, double quantity)
+        public Product(string name, double quantity, double price)
         {
             Name = name;
             Price = price;
             Quantity = quantity;
             _productCount++;
+        }
+        public void ApplyDiscount(double percent)
+        {
+            Price *= (1 - percent / 100);
+        }
+        public void ApplyDiscount(double percent, double minQuantity)
+        {
+            if (_quantity >= minQuantity) ApplyDiscount(percent);
+        }
+        public void ApplyDiscount(double percent, double minQuantity, double maxPrice)
+        {
+            if (_price <= maxPrice) ApplyDiscount(percent, minQuantity);
+        }
+
+        public static Product CreateDefault()
+        {
+            return new Product("Unknown", 0, 0.01);
+        }
+        public static Product CreateDefault(string name)
+        {
+            return new Product(name, 0, 0.01);
         }
     }
 }
