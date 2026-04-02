@@ -44,8 +44,11 @@ public class GeoFigures
            rectangleEmpty
         };
         Console.WriteLine($"This list contains following Shape class objects:");
-        shapesList.ForEach(delegate (Shape shape)
-            { Console.WriteLine($"{shape.GetType().Name} area is {shape.GetArea()} units² and perimeter is {shape.GetPerimeter()} units."); });
+        shapesList.ForEach(o =>
+            { Console.WriteLine($"{o.GetType().Name} area is {o.GetArea()} units² and perimeter is {o.GetPerimeter()} units."); });
         Console.WriteLine();
+        
+        Console.WriteLine($"Total area of Shape objects in this list is {ShapeHelper.CalculateArea(shapesList)} units².");
+        Console.WriteLine($"Total perimeter of Shape objects in this list is {ShapeHelper.CalculatePerimeter(shapesList)} units.");
     }
 }

@@ -8,5 +8,4 @@ public class Shape
     {
         return 0;
     }
-
 }
