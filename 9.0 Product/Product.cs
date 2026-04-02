@@ -12,7 +12,9 @@ namespace Products
             set
             {
                 if (value == "" || value == null)
-                { throw new EmptyStringException("Parameter Name cannot be null or empty"); }
+                {
+                    throw new EmptyStringException("Parameter Name cannot be null or empty");
+                }
                 else
                 { _name = value; }
             }
@@ -27,7 +29,9 @@ namespace Products
             set
             {
                 if (value <= 0)
-                { throw new NonPositiveValueException("Parameter Price can have positive value only"); }
+                {
+                    throw new NonPositiveValueException("Parameter Price can have positive value only");
+                }
                 else
                 { _price = value; }
             }
@@ -42,7 +46,9 @@ namespace Products
             set
             {
                 if (value < 0)
-                { throw new NegativeValueException("Parameter Quantity can only be 0 or greater"); }
+                {
+                    throw new NegativeValueException("Parameter Quantity can only be 0 or greater");
+                }
                 else
                 { _quantity = value; }
             }
