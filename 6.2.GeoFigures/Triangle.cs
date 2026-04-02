@@ -1,4 +1,4 @@
-public class Triangle
+public class Triangle : Shape
 {
     public double Base;
     public double Height;
@@ -11,11 +11,11 @@ public class Triangle
         Base = triangleBase;
         Height = height;
     }
-    public double GetArea()
+    public override double GetArea()
     {
         return Math.Round(Base * Height / 2, 3);
     }
-    public double GetPerimeter()
+    public override double GetPerimeter()
     {
         var side = Math.Sqrt(Height * Height + Base * Base / 4);
         return Math.Round(Base + side * 2, 3);

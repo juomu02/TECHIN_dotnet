@@ -1,4 +1,4 @@
-public class Circle
+public class Circle : Shape
 {
     public double Radius;
 
@@ -10,11 +10,11 @@ public class Circle
         Radius = radius;
     }
 
-    public double GetArea()
+    public override double GetArea()
     {
         return Math.Round(Math.PI * Radius * Radius, 3);
     }
-    public double GetPerimeter()
+    public override double GetPerimeter()
     {
         return Math.Round(2 * Math.PI * Radius, 3);
     }

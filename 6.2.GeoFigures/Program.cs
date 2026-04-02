@@ -19,16 +19,33 @@ public class GeoFigures
         var triangleEmpty = new Triangle();
         var rectangleEmpty = new Rectangle();
         Console.WriteLine($"circle empty area: {circleEmpty.GetArea()} units²; triangle empty area: {triangleEmpty.GetArea()} units²; rectangle empty area: {rectangleEmpty.GetArea()} units²;");
+        Console.WriteLine();
 
         Console.WriteLine($"Rectangle area is {rectArea} units² and perimeter is {rectPerimeter} units.");
+        Console.WriteLine();
 
         var circleArea = circle.GetArea();
         var circlePerimeter = circle.GetPerimeter();
         Console.WriteLine($"Circle area is {circleArea} units² and perimeter is {circlePerimeter} units.");
+        Console.WriteLine();
 
         var triangleArea = triangle.GetArea();
         var trianglePerimeter = triangle.GetPerimeter();
         Console.WriteLine($"Triangle area is {triangleArea} units² and perimeter is {trianglePerimeter} units.");
+        Console.WriteLine();
 
+        var shapesList = new List<Shape>
+        {
+           circle,
+           triangle,
+           rectangle,
+           circleEmpty,
+           triangleEmpty,
+           rectangleEmpty
+        };
+        Console.WriteLine($"This list contains following Shape class objects:");
+        shapesList.ForEach(delegate (Shape shape)
+            { Console.WriteLine($"{shape.GetType().Name} area is {shape.GetArea()} units² and perimeter is {shape.GetPerimeter()} units."); });
+        Console.WriteLine();
     }
 }

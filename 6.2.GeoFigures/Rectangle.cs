@@ -1,4 +1,4 @@
-public class Rectangle
+public class Rectangle : Shape
 {
     private double _width;
     private double _height;
@@ -34,11 +34,11 @@ public class Rectangle
         Height = height;
     }
 
-    public double GetArea()
+    public override double GetArea()
     {
         return Math.Round(_height * _width, 3);
     }
-    public double GetPerimeter()
+    public override double GetPerimeter()
     {
         return Math.Round(2 * _height + 2 * _width, 3);
     }
