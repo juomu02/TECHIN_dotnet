@@ -57,6 +57,7 @@ namespace MyApp
                 else
                 {
                     Console.WriteLine($"Įvedėte neteisingą reikšmę. {title}");
+                    input = Console.ReadLine();
                 }
                 ;
             } while (!correctInput);
