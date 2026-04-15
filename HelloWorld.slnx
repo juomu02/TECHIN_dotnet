@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="13.1 Užduotys kartojimui/13.1 Užduotys kartojimui.csproj" />
+  <Project Path="14.0 GameSystem/14.0 GameSystem.csproj" />
   <Project Path="2.0 Ciklai/2.0 Ciklai.csproj" />
   <Project Path="2.1 Masyvai/2.1 Masyvai.csproj" />
   <Project Path="2.2 List/2.2 List.csproj" />
